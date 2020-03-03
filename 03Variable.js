@@ -3,9 +3,9 @@
 var x = 5;
 var y = 2;
 var sum = x + y;
-var sub = x - y;
-var mul = x * y;
-var div = x / y;
+var substraction = x - y;
+var multiplication = x * y;
+var division = x / y;
 console.log(sum);
 console.log(substraction);
 console.log(multiplication);
