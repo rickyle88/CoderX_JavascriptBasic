@@ -18,3 +18,7 @@ var isMale;
 fullName = "Nguyen Le";
 age = 32;
 isMale = true;
+
+console.log(typeof fullName);
+console.log(typeof age);
+console.log(typeof isMale);
