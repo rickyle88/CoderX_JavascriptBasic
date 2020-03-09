@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Display contact's list -->
+    <ul id="contact-list">
+
+    </ul>
+    <script>
+        // 1. for...of
+        var employees = [
+            { name: 'Thinh', age: 28 },
+            { name: 'Hiroshi', age: 26 },
+            { name: 'Maria', age: 32 }
+        ];
+
+        let content = '';
+        for(let employee of employees){
+            content += '<li>' + employee.name + '</li>';
+        }
+
+        console.log(content);
+
+        let contactList = document.getElementById('contact-list');
+        contactList.innerHTML = content;
+    </script>
+</body>
+
+</html>
