@@ -2,6 +2,7 @@
 // push, pop, unshift, shift
 
 // array.map => transform 
+// funtion in map must return a new value
 
 var numbers = [1,2,3,4];
 
