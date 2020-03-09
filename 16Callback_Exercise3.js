@@ -18,4 +18,5 @@ function transform(numbers, callback) {
 
 function double(num) {
     // viết code ở đây
+    return num*2;
 }
