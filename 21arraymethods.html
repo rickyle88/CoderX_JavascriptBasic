@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML with Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <style>
+        body{
+            padding: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col form-group">
+            <label for="genderfilter">Gender</label>
+            <select class="form-control" id="genderFilter">
+                <option value="null">All</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+    </div>
+    <ul class="list-group" id="userList">
+        <!-- <li class="list-group-item">Tom</li>       -->
+    </ul>
+
+    <script>
+        // Create an array contain data
+        var users = [
+            {name: 'Tom', gender: 'male'},
+            {name: 'Maria', gender: 'female'},
+            {name: 'Jason', gender: 'male'},
+            {name: 'Sara', gender: 'female'},
+            {name: 'Teo', gender: 'male'},
+        ];
+
+        // Get ul element from DOM
+        let userList = document.getElementById('userList');
+        // Get dropdown element from DOM
+        let genderFilter = document.getElementById('genderFilter');
+
+        // Call render function
+        render(userList, users);
+
+        // Check status onchange of dropdown
+        genderFilter.onchange = function(){
+            // Return selected value to a variable
+            let selectedGender = this.value;    
+
+            // Filter 
+            var filteredUsers = users.filter(function(user){
+                return user.gender === selectedGender;
+            })
+
+            render(userList, filteredUsers);
+        }
+
+        // container: userList (ul)
+        // items: users (array data)
+        function render(container, items){
+            // Create all li elements with data from items
+            // string like this: "<li>erwer</li>"
+            let htmlItems = items.map(function(item){
+                console.log(item.name);
+                return '<li class="list-group-item">' + item.name + '</li>';
+            });
+
+            // htmlItems will be an array of li elements
+            // htmlItems = ['<li class="list-group-item">Tom</li>', '<li class="list-group-item">Maria</li>'...]
+            
+            // Convert htmlItems array to string
+            let html = htmlItems.join('');
+
+            container.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
