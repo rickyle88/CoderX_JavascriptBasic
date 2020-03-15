@@ -4,6 +4,8 @@ var myDog = {
     isAlive: false
 };
 
+console.log(typeof myDog);
+
 console.log(myDog.name);
 console.log(myDog['weight']);
 

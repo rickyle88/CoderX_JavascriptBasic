@@ -5,6 +5,7 @@ console.log(today);
 // 
 // Wed Mar 11 2020 23:26:05 GMT-0700 (Pacific Daylight Time) {}
 
+// Method 1: object literal
 var mouse = {
     weight: 0.2,
     getWeight: function(){
@@ -12,7 +13,7 @@ var mouse = {
     }
 };
 
-// constructor function 
+// Method 2: constructor function 
 function Mouse(color,weight){
     this.type = 'mouse';
     this.color = color;

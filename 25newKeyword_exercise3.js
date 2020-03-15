@@ -17,7 +17,7 @@ function countProperty(obj) {
     // viết code ở đây
     let count = 0;
     for(let i in obj){
-        count++
+        count++;
     }
     return count;
 
