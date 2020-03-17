@@ -14,16 +14,17 @@
 */
 
 function Student(diemToan, diemLy, diemHoa) {
-    // Viết code ở đây
-    this.diemToan = diemToan;
-    this.diemLy = diemLy;
-    this.diemHoa = diemHoa;
+  // Viết code ở đây
+  this.diemToan = diemToan;
+  this.diemLy = diemLy;
+  this.diemHoa = diemHoa;
 }
 
 Student.prototype.average = function () {
-    // Viết code ở đây
-    
-}return (this.diemToan + this.diemLy + this.diemHoa)/3;
+  // Viết code ở đây
+  return (this.diemToan + this.diemLy + this.diemHoa) / 3;
+
+}
 
 var student1 = new Student(6, 7, 7);
 var student2 = new Student(8, 9, 6);

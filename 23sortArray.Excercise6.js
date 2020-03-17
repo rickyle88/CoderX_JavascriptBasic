@@ -22,3 +22,5 @@ function getTopStudents(students) {
         return a;
     },[]).slice(0,3);
 }
+
+console.log(getTopStudents(students));
