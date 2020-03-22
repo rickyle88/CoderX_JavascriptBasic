@@ -1,5 +1,5 @@
 {
-  "name": "43nodeco",
+  "name": "43node_co_excercise1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "co": "^4.6.0"
   }
 }

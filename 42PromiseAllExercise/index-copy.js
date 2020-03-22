@@ -29,23 +29,25 @@ Promise.all([
         }
         throw err;
     }),
-    axiosGetWebContent('https://123jsonplaceholder.typicode.com/todos/2')
+    axiosGetWebContent('https://jsonplaceholder.typicode.com/todos/2')
     .catch(function(err){
         if(err!= null){
             return;
         }
         throw err;
-    })
+    }),
 ]).then(function(result){
     // console.log(result[0].data);
     // console.log(result[1].data);
-    for(let i of result){
-        if(i === undefined){
-            console.log("Undefined");
-        }else{
-            console.log(i.data);
-        }}        
-  
+    // for(let i of result){
+    //     if(i.data === undefined){
+    //         console.log("Undefined");
+    //     }else{
+    //         console.log(i.data);
+    //     }
+        
+    // }
+    console.log(result);
     console.log(result.length);
 }).catch(function(err){
     console.log(err);
