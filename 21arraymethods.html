@@ -74,6 +74,16 @@
             let html = htmlItems.join('');
 
             container.innerHTML = html;
+            
+             // Or we can use reduce
+
+            // Create li elements from items array
+            // let liElements = items.reduce(function(a,v){
+            //     return a + '<li>' + v.name + '</li>';
+            // },'');
+
+            // // Put all li elements into container
+            // container.innerHTML = liElements;
         }
     </script>
 </body>
