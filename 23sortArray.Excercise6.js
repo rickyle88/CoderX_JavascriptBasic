@@ -21,6 +21,12 @@ function getTopStudents(students) {
         a.push(v.name);
         return a;
     },[]).slice(0,3);
+    
+//       return students.sort(function(a,b){
+//         return b.score - a.score;
+//     }).map(function(v){
+//         return v.name;
+//     }).slice(0,3);
 }
 
 console.log(getTopStudents(students));
